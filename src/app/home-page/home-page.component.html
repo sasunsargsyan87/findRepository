@@ -1,0 +1,12 @@
+
+<div class="container">
+  <div class="button">
+    <button mat-stroked-button color="primary" routerLink="/answers" routerLinkActive="active">Repositories</button>
+  </div>
+  <h1>find repositories in github</h1>
+  <div class="search">
+    <input type="text" placeholder="Type as: owner/:repositoryName" [(ngModel)]="userNameRepos">
+    <button type="submit" (click)="search()"><i class="fa fa-search" ></i></button>
+  </div>
+  <p class="error" *ngIf="flag">Not found</p>
+</div>

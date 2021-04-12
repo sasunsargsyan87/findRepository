@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="example-button-container">
+    <button routerLink="/home" routerLinkActive="active" mat-fab color="primary"
+            aria-label="Example icon button with a home icon">
+      <mat-icon>home</mat-icon>
+    </button>
+  </div>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Type as: owner/:repositoryName</mat-label>
+      <input matInput (keyup.enter)="onEnter()" [(ngModel)]="userNameRepos">
+    </mat-form-field>
+  </form>
+  <p class="error" *ngIf="flag1">Not found</p>
+  <div class="repos">
+    <table>
+      <tr>
+        <th>Owner</th>
+        <th>FullName</th>
+        <th>Url Repositories</th>
+        <th>StarsCount</th>
+        <th>Stars</th>
+      </tr>
+      <tr>
+        <td>{{owner}}</td>
+        <td>{{fullName}}</td>
+        <td>{{url}}</td>
+        <td>{{starCount}}</td>
+        <td><span (click)="postData(owner, fullName, url, starCount)" [ngStyle]="{color : flag}"
+                  class="fa fa-star"></span></td>
+      </tr>
+    </table>
+  </div>
+  <div class="repos repositories">
+    <cdk-virtual-scroll-viewport  style="height: 270px" itemSize="90" >
+      <ng-container>
+        <tr>
+          <th>Owner</th>
+          <th>FullName</th>
+          <th>Url Repositories</th>
+          <th>StarsCount</th>
+        </tr>
+      </ng-container>
+      <ng-container *cdkVirtualFor="let repo of repositories">
+        <tr>
+          <td>{{repo.ownerRepos}}</td>
+          <td>{{repo.fullNameRepos}}</td>
+          <td><a href="{{repo.urlRepos}}">{{repo.urlRepos}}</a></td>
+          <td>{{repo.starCountRepos}}</td>
+        </tr>
+
+      </ng-container>
+    </cdk-virtual-scroll-viewport>
+  </div>
+</div>

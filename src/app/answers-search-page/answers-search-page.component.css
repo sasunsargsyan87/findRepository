@@ -1,0 +1,84 @@
+.container {
+  position: absolute;
+  background-color: #98dcfa;
+  background: -webkit-linear-gradient(to left, #98dcfa, #8ad0f3);
+  background: -moz-linear-gradient(to left, #98dcfa, #8ad0f3);
+  background: linear-gradient(to left, #98dcfa, #8ad0f3);
+  width: 100%;
+  height: 100%;
+}
+
+.container .example-button-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+form {
+  position: relative;
+  top: 60px;
+  left: 400px;
+  min-width: 350px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+}
+
+.repos {
+  position: relative;
+  width: 80%;
+  height: 120px;
+  padding: 20px;
+  top: 80px;
+  margin-left: 150px;
+  border: 2px solid #f0f2f5;
+  border-radius: 6px;
+  background-color: #acd3e9;
+  box-shadow: 5px 3px 10px #f0f2f5;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #749ff1;
+}
+
+td a {
+  text-decoration: none;
+}
+
+tr:hover {
+  background-color:#f5f5f5;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+  position: absolute;
+  top: 100px;
+  left: 500px;
+}
+
+.repositories {
+  top: 120px;
+  background-color: #b7dbef;
+  height: 300px;
+}
+
+
+
+.example-container {
+  height: 300px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
